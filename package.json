@@ -1,0 +1,24 @@
+{
+  "name": "tekito",
+  "version": "1.0.0",
+  "description": "PHPとMySQLの仮想サーバーを使って開発ができる。",
+  "main": "index.js",
+  "scripts": {
+    "browsersync": "browser-sync start --proxy localhost:8080 --files=\"www/**/*.php,www/**/*.css\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://kensuke0518@github.com/kensuke0518/docker_php_mysql.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kensuke0518/docker_php_mysql/issues"
+  },
+  "homepage": "https://github.com/kensuke0518/docker_php_mysql#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7"
+  }
+}
