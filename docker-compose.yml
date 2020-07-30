@@ -11,7 +11,9 @@ services:
       - php
 
   php:
-    build: ./php
+    build: 
+      context: ./php
+      dockerfile: Dockerfile
     volumes:
       - ./www/html:/var/www/html
     depends_on:
