@@ -17,6 +17,8 @@ PHPファイルであるindex.phpからMySQLへの接続のため、`mysql_conne
 https://sagara.ink/docker_compose-mysqli/  
 `Fatal error: Uncaught Error: Call to undefined function mysql_connect() in /var/www/html/index.php:4 Stack trace: #0 {main} thrown in /var/www/html/index.php on line 4`  
 上記のエラーが出るため、`mysqli_connect()`を追加する措置を取った。  
+  
+また、mysqli_connect()の引数に入れるURLについては、phpが動いているnginxのURLではなく、docker-compose.ymlの「php」で記載した`depends_on`の値（ここではdb）と「db」に書かれている`ports`の右側（コンテナにバインドした側？）のポート番号を記載する（`db:3306`）こと。
 
 ### 注意
 - Browser-Syncでルートディレクトリを設定する必要はない。docker-compose.yml内でルートディレクトリを設定しているから  
