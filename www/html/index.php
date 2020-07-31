@@ -1,6 +1,8 @@
 <?php
-// phpinfo();
+$dsn = 'mysql:host=db:3306;dbname=';  //dbname=自分で作成したデータベーススペース名（database space name）を入れる
+$user = 'root';
+$pass = 'secret';
 
-mysqli_connect('db:3306','root','secret');    //rootはID,secretはPASSWORD。docker-compose.ymlのdb:environmentの箇所を参照。
+$dbn = new PDO($dsn,$user,$pass);
 echo 'データベースに接続しました';
 ?>
