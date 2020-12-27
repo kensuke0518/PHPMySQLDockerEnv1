@@ -12,6 +12,12 @@ http://localhost:8888 に移動するとphpmyadminが開く
 2. `docker-compose up -d` でnginx、php、mysqlのコンテナを立ち上げる
 3. `npm run browsersync` でファイルを監視して、ブラウザを自動更新する。
 
+## データベーススペース名の解決
+1. phpmyadminにログインする
+2. ログインパスワードはsecret
+3. 上メニューの「データベース」→データベース名欄に作成したいデータベーススペース名を自由に入力。文字コードは「utf8 / utf8_general_ci」？
+
+
 ## MySQLへの接続
 PHPファイルであるindex.phpからMySQLへの接続のため、`mysql_connect()`を使用していたが、現在は非推奨とのこと。  
 https://sagara.ink/docker_compose-mysqli/  
