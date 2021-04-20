@@ -35,3 +35,4 @@ https://sagara.ink/docker_compose-mysqli/
 https://qiita.com/ma_me/items/802059e8f1fadcb691eb  
 https://orfool.com/programing/1505/  
 https://www.browsersync.io/docs/command-line#start
+- Browser-Syncを起動するとhttp://localhost:3000/ で起動する。package.jsonのnpm scriptsで"browsersync"の項目に`--proxy localhost:8080`と言う風にプロクシを通しているのでこうなる。
