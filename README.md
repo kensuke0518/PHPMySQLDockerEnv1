@@ -2,10 +2,12 @@
 PHPとMySQLの仮想サーバーを使って開発ができる。  
   
 ## 使い方
-ターミナル上で該当のディレクトリに移動する  
-docker-compose up -dで起動する。  
-http://localhost:8080 に移動すると作業ページが開く  
+1. Dockerを起動する。
+2. ターミナル上で該当のディレクトリに移動する  
+3. docker-compose up -dで起動する。  
+http://localhost:8080 に移動すると作業ページが開く。  
 http://localhost:8888 に移動するとphpmyadminが開く  
+`SQLSTATE[HY000] [1049] Unknown database 'データベーススペース名'`と出るが、この解決方法は下で述べる。  
   
 ## Browser-Syncとの同時利用
 1. `npm ci` でpackage.lock.jsonを基にnode_modules内の「browser-sync」をインストール
@@ -14,7 +16,7 @@ http://localhost:8888 に移動するとphpmyadminが開く
 
 ## データベーススペース名の解決
 1. phpmyadminにログインする
-2. ログインパスワードはsecret
+2. ユーザー名はroot、ログインパスワードはsecret
 3. 上メニューの「データベース」→データベース名欄に作成したいデータベーススペース名を自由に入力。文字コードは「utf8 / utf8_general_ci」？
 
 
