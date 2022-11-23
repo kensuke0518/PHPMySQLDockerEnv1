@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/kensuke0518/docker_php_mysql#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.7"
+    "browser-sync": "^2.27.10"
   }
 }
